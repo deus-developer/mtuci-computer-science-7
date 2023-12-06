@@ -1,0 +1,6 @@
+from .help_command_handler import help_command_handler
+from .mtuci_command_handler import mtuci_command_handler
+from .start_command_handler import start_command_handler
+from .unknown_handler import unknown_handler
+from .week_command_handler import week_command_handler
+from .schedule_handlers import week_schedule_handler, day_schedule_handler
