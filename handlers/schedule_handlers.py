@@ -47,6 +47,8 @@ def get_schedule_text_by_date(timetables: List[TimeTable]) -> str:
 def get_sorted_schedule_by_week(
     schedule: List[TimeTable],
 ) -> List[Tuple[datetime.date, List[TimeTable]]]:
+    schedule.sort(key=lambda t: t.date)
+
     schedule_by_date: Dict[datetime.date, List[TimeTable]] = defaultdict(list)
     for timetable in schedule:
         schedule_by_date[timetable.date.date()].append(timetable)

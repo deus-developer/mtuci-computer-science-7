@@ -75,7 +75,9 @@ def main():
         f'Bot Username: {me.username}'
     )
 
-    bot.infinity_polling(allowed_updates=["message"])
+    bot.infinity_polling(
+        allowed_updates=["message"],
+    )
 
 
 if __name__ == "__main__":
