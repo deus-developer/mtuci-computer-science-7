@@ -68,6 +68,13 @@ def main():
 
     bot.register_message_handler(unknown_handler, pass_bot=True)
 
+    me = bot.get_me()
+    print(
+        f'Bot ID: {me.id}\n'
+        f'Bot Name: {me.first_name}\n'
+        f'Bot Username: {me.username}'
+    )
+
     bot.infinity_polling(allowed_updates=["message"])
 
 
